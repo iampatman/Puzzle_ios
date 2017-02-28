@@ -10,18 +10,23 @@ import UIKit
 
 class SubscriptionViewCell: UITableViewCell {
 
-	@IBOutlet weak var imageView: UIImageView?
+	@IBOutlet weak var itemTmageView: UIImageView?
 	@IBOutlet weak var lblSubscriptionName: UILabel?
 	@IBOutlet weak var lblCompanyName: UILabel?
 	
-	var item: SubscriptionItem?
+	var item: SubscriptionItem? {
+		didSet {
+			lblCompanyName?.text = item?.companyName;
+			lblSubscriptionName?.text = item?.name;
+		}
+	}
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        //super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }

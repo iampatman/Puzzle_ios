@@ -17,6 +17,7 @@
 		2A9354BC1E65D00700DD75BE /* SubscriptionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354BB1E65D00700DD75BE /* SubscriptionListViewController.swift */; };
 		2A9354BE1E65D01E00DD75BE /* SubscriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354BD1E65D01E00DD75BE /* SubscriptionViewCell.swift */; };
 		2A9354C11E65D10600DD75BE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354C01E65D10600DD75BE /* Utils.swift */; };
+		2A9354C31E65D7E800DD75BE /* starbucks-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */; };
 		86F2BA7B99666739A3BB9156 /* Pods_Puzzle_Parts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838BA701D47839CF40EB0697 /* Pods_Puzzle_Parts.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		2A9354BB1E65D00700DD75BE /* SubscriptionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionListViewController.swift; sourceTree = "<group>"; };
 		2A9354BD1E65D01E00DD75BE /* SubscriptionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionViewCell.swift; sourceTree = "<group>"; };
 		2A9354C01E65D10600DD75BE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "starbucks-logo.jpg"; sourceTree = "<group>"; };
 		36F61B9EE1113AE5E5D7E260 /* Pods-Puzzle.Parts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle.Parts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle.Parts/Pods-Puzzle.Parts.debug.xcconfig"; sourceTree = "<group>"; };
 		838BA701D47839CF40EB0697 /* Pods_Puzzle_Parts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Puzzle_Parts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2A6138241E5DBF820098F9E2 /* Main.storyboard */,
+				2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */,
 				2A6138271E5DBF820098F9E2 /* Assets.xcassets */,
 				2A6138291E5DBF820098F9E2 /* LaunchScreen.storyboard */,
 				2A61382C1E5DBF820098F9E2 /* Info.plist */,
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A61382B1E5DBF820098F9E2 /* LaunchScreen.storyboard in Resources */,
+				2A9354C31E65D7E800DD75BE /* starbucks-logo.jpg in Resources */,
 				2A6138281E5DBF820098F9E2 /* Assets.xcassets in Resources */,
 				2A6138261E5DBF820098F9E2 /* Main.storyboard in Resources */,
 			);

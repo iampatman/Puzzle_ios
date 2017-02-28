@@ -26,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jvy-QL-1mc">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbucks-logo" translatesAutoresizingMaskIntoConstraints="NO" id="jvy-QL-1mc">
                                             <rect key="frame" x="18" y="7" width="65" height="65"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="65" id="Usg-pq-ger"/>
@@ -59,7 +59,6 @@
                                     <outlet property="imageView" destination="jvy-QL-1mc" id="OmJ-Nv-tIa"/>
                                     <outlet property="lblCompanyName" destination="qgJ-Ms-2jO" id="ase-fs-nbB"/>
                                     <outlet property="lblSubscriptionName" destination="83T-vT-RAS" id="q2w-wg-Un8"/>
-                                    <segue destination="YnK-RW-jTY" kind="showDetail" identifier="showSubscriptionItemDetail" id="tIr-yT-Izb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -68,7 +67,10 @@
                             <outlet property="delegate" destination="o89-1t-pZ4" id="pY0-Sx-sTF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="What's new" id="GUI-UR-P6L"/>
+                    <navigationItem key="navigationItem" title="What's new" id="GUI-UR-P6L">
+                        <barButtonItem key="leftBarButtonItem" title="Categories" id="LiB-4H-llA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="DZy-Lo-zJK"/>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="9Vj-Nk-9nf">
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">
@@ -386,7 +388,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="841-Ge-kgN">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="starbucks-logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="841-Ge-kgN">
                                             <rect key="frame" x="17" y="0.0" width="75" height="71"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -477,13 +479,17 @@
         <!--Navigation Controller-->
         <scene sceneID="wTB-or-MPn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YnK-RW-jTY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="YnK-RW-jTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bNd-iY-Poy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AhB-Mu-HvW">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="eBr-ru-fhl" kind="relationship" relationship="rootViewController" id="5rc-9l-K9g"/>
                     </connections>
@@ -492,11 +498,11 @@
             </objects>
             <point key="canvasLocation" x="3424.8000000000002" y="417.8410794602699"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="DY6-aB-Ozw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hn0-Fu-DEw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XGr-Cw-sij"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="XGr-Cw-sij"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="da1-5e-PrG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -530,6 +536,10 @@
             <point key="canvasLocation" x="2773.5999999999999" y="-447.52623688155927"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="starbucks-logo" width="900" height="900"/>
+        <image name="starbucks-logo.jpg" width="900" height="900"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uOA-TV-rhj"/>
         <segue reference="fdh-1H-btH"/>

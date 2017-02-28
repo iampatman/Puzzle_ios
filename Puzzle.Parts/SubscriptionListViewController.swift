@@ -14,7 +14,7 @@ class SubscriptionListViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		data =  
+		data =  Utils.initSubscriptionItemData();
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +38,7 @@ class SubscriptionListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubscriptionCell", for: indexPath) as? SubscriptionViewCell
-
+		cell?.item = data[indexPath.row]
         return cell!
     }
 
@@ -47,6 +47,10 @@ class SubscriptionListViewController: UITableViewController {
 		
 	}
 	
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return CGFloat(100)
+	}
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
