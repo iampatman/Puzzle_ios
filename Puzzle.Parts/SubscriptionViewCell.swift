@@ -10,7 +10,7 @@ import UIKit
 
 class SubscriptionViewCell: UITableViewCell {
 
-	@IBOutlet weak var itemTmageView: UIImageView?
+	@IBOutlet weak var itemImageView: UIImageView?
 	@IBOutlet weak var lblSubscriptionName: UILabel?
 	@IBOutlet weak var lblCompanyName: UILabel?
 	
@@ -18,6 +18,7 @@ class SubscriptionViewCell: UITableViewCell {
 		didSet {
 			lblCompanyName?.text = item?.companyName;
 			lblSubscriptionName?.text = item?.name;
+			itemImageView?.image = #imageLiteral(resourceName: "starbucks-logo");
 		}
 	}
     override func awakeFromNib() {
