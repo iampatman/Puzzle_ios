@@ -9,5 +9,20 @@
 import UIKit
 
 class User: NSObject {
-
+	var mobilePhone: String = ""
+	var sessionID: String = ""
+	var email: String = ""
+	var name: String = ""
+	
+	override init() {
+		super.init()
+		mobilePhone = ""
+	}
+	init(mobile: String){
+		super.init()
+		sessionID = ""
+		email = ""
+		mobilePhone = mobile
+	}
+	
 }

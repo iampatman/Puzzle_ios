@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A17561E1E6DA64000528A30 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17561D1E6DA64000528A30 /* ProgressView.swift */; };
+		2A1756201E6DAF3000528A30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17561F1E6DAF3000528A30 /* MainViewController.swift */; };
+		2A39C1811E68512D005E5BC8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39C1801E68512D005E5BC8 /* RegistrationViewController.swift */; };
 		2A60217F1E671BC10049D985 /* SubscriptionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60217E1E671BC10049D985 /* SubscriptionDetailViewController.swift */; };
 		2A61381F1E5DBF820098F9E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61381E1E5DBF820098F9E2 /* AppDelegate.swift */; };
 		2A6138261E5DBF820098F9E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6138241E5DBF820098F9E2 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 		2A9354BE1E65D01E00DD75BE /* SubscriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354BD1E65D01E00DD75BE /* SubscriptionViewCell.swift */; };
 		2A9354C11E65D10600DD75BE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354C01E65D10600DD75BE /* Utils.swift */; };
 		2A9354C31E65D7E800DD75BE /* starbucks-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */; };
+		2ADB0C0B1E6D35D300F2142D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB0C0A1E6D35D300F2142D /* NetworkManager.swift */; };
+		2ADB0C0D1E6D39A200F2142D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB0C0C1E6D39A200F2142D /* LoginViewController.swift */; };
+		2ADB0C0F1E6D3BE400F2142D /* ReturnCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB0C0E1E6D3BE400F2142D /* ReturnCode.swift */; };
 		2ADCCA291E67DBE6006E694B /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCCA281E67DBE6006E694B /* ItemDetailController.swift */; };
 		2ADCCA2B1E67DBF8006E694B /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCCA2A1E67DBF8006E694B /* ReviewsViewController.swift */; };
 		2ADCCA2D1E67F113006E694B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCCA2C1E67F113006E694B /* MapViewController.swift */; };
@@ -29,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		281938B17707F3C80F229678 /* Pods-Puzzle.Parts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle.Parts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle.Parts/Pods-Puzzle.Parts.release.xcconfig"; sourceTree = "<group>"; };
+		2A17561D1E6DA64000528A30 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		2A17561F1E6DAF3000528A30 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2A39C1801E68512D005E5BC8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2A60217E1E671BC10049D985 /* SubscriptionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailViewController.swift; sourceTree = "<group>"; };
 		2A61381B1E5DBF820098F9E2 /* Puzzle.Parts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzle.Parts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A61381E1E5DBF820098F9E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +52,10 @@
 		2A9354BD1E65D01E00DD75BE /* SubscriptionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionViewCell.swift; sourceTree = "<group>"; };
 		2A9354C01E65D10600DD75BE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "starbucks-logo.jpg"; sourceTree = "<group>"; };
+		2ADB0C0A1E6D35D300F2142D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2ADB0C0C1E6D39A200F2142D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2ADB0C0E1E6D3BE400F2142D /* ReturnCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnCode.swift; sourceTree = "<group>"; };
+		2ADB0C101E6D3D6A00F2142D /* ObjectiveC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ObjectiveC-Bridging-Header.h"; path = "../ObjectiveC-Bridging-Header.h"; sourceTree = "<group>"; };
 		2ADCCA281E67DBE6006E694B /* ItemDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
 		2ADCCA2A1E67DBF8006E694B /* ReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		2ADCCA2C1E67F113006E694B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A17561C1E6DA62100528A30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A17561D1E6DA64000528A30 /* ProgressView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2A39C17F1E68510C005E5BC8 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				2A39C1801E68512D005E5BC8 /* RegistrationViewController.swift */,
+				2ADB0C0C1E6D39A200F2142D /* LoginViewController.swift */,
+			);
+			name = Registration;
+			sourceTree = "<group>";
+		};
 		2A6138121E5DBF820098F9E2 = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +130,6 @@
 				2A9354B31E65CF4B00DD75BE /* User.swift */,
 				2A9354B51E65CF5B00DD75BE /* SubscriptionItem.swift */,
 				2A9354B71E65CF6500DD75BE /* Transaction.swift */,
-				2A9354C01E65D10600DD75BE /* Utils.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -108,6 +137,7 @@
 		2A9354B91E65CFD700DD75BE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A39C17F1E68510C005E5BC8 /* Registration */,
 				2ADCCA271E67D124006E694B /* New Group */,
 				2A9354BA1E65CFE100DD75BE /* ListSubscriptions */,
 			);
@@ -119,8 +149,8 @@
 			children = (
 				2A9354BB1E65D00700DD75BE /* SubscriptionListViewController.swift */,
 				2A9354BD1E65D01E00DD75BE /* SubscriptionViewCell.swift */,
-				2A60217E1E671BC10049D985 /* SubscriptionDetailViewController.swift */,
 				2AFAFDF61E684B0500D1636E /* SubscriptionAPI.swift */,
+				2A17561F1E6DAF3000528A30 /* MainViewController.swift */,
 			);
 			name = ListSubscriptions;
 			sourceTree = "<group>";
@@ -128,11 +158,16 @@
 		2A9354BF1E65D0CF00DD75BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2A17561C1E6DA62100528A30 /* View */,
+				2A9354C01E65D10600DD75BE /* Utils.swift */,
+				2ADB0C101E6D3D6A00F2142D /* ObjectiveC-Bridging-Header.h */,
+				2ADB0C0A1E6D35D300F2142D /* NetworkManager.swift */,
 				2A6138241E5DBF820098F9E2 /* Main.storyboard */,
 				2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */,
 				2A6138271E5DBF820098F9E2 /* Assets.xcassets */,
 				2A6138291E5DBF820098F9E2 /* LaunchScreen.storyboard */,
 				2A61382C1E5DBF820098F9E2 /* Info.plist */,
+				2ADB0C0E1E6D3BE400F2142D /* ReturnCode.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +175,7 @@
 		2ADCCA271E67D124006E694B /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				2A60217E1E671BC10049D985 /* SubscriptionDetailViewController.swift */,
 				2ADCCA281E67DBE6006E694B /* ItemDetailController.swift */,
 				2ADCCA2A1E67DBF8006E694B /* ReviewsViewController.swift */,
 				2ADCCA2C1E67F113006E694B /* MapViewController.swift */,
@@ -293,13 +329,19 @@
 				2ADCCA2D1E67F113006E694B /* MapViewController.swift in Sources */,
 				2A60217F1E671BC10049D985 /* SubscriptionDetailViewController.swift in Sources */,
 				2A9354B41E65CF4B00DD75BE /* User.swift in Sources */,
+				2ADB0C0D1E6D39A200F2142D /* LoginViewController.swift in Sources */,
 				2A9354BC1E65D00700DD75BE /* SubscriptionListViewController.swift in Sources */,
+				2A39C1811E68512D005E5BC8 /* RegistrationViewController.swift in Sources */,
+				2A17561E1E6DA64000528A30 /* ProgressView.swift in Sources */,
+				2ADB0C0F1E6D3BE400F2142D /* ReturnCode.swift in Sources */,
 				2A61381F1E5DBF820098F9E2 /* AppDelegate.swift in Sources */,
 				2A9354C11E65D10600DD75BE /* Utils.swift in Sources */,
 				2A9354BE1E65D01E00DD75BE /* SubscriptionViewCell.swift in Sources */,
 				2AFAFDF71E684B0500D1636E /* SubscriptionAPI.swift in Sources */,
 				2ADCCA2B1E67DBF8006E694B /* ReviewsViewController.swift in Sources */,
+				2ADB0C0B1E6D35D300F2142D /* NetworkManager.swift in Sources */,
 				2ADCCA291E67DBE6006E694B /* ItemDetailController.swift in Sources */,
+				2A1756201E6DAF3000528A30 /* MainViewController.swift in Sources */,
 				2A9354B81E65CF6500DD75BE /* Transaction.swift in Sources */,
 				2A9354B61E65CF5B00DD75BE /* SubscriptionItem.swift in Sources */,
 			);
@@ -428,6 +470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sg.edu.nus.iss.trung.Puzzle-Parts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -442,6 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sg.edu.nus.iss.trung.Puzzle-Parts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
