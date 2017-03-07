@@ -22,6 +22,10 @@
 		2A9354BE1E65D01E00DD75BE /* SubscriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354BD1E65D01E00DD75BE /* SubscriptionViewCell.swift */; };
 		2A9354C11E65D10600DD75BE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354C01E65D10600DD75BE /* Utils.swift */; };
 		2A9354C31E65D7E800DD75BE /* starbucks-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */; };
+		2AA8BF481E6F014200624BAB /* PurchasingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BF471E6F014200624BAB /* PurchasingViewController.swift */; };
+		2AA8BF4A1E6F021700624BAB /* Pricing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BF491E6F021700624BAB /* Pricing.swift */; };
+		2AA8BF4C1E6F022300624BAB /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BF4B1E6F022300624BAB /* Discount.swift */; };
+		2AA8BF4E1E6F024A00624BAB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BF4D1E6F024A00624BAB /* Product.swift */; };
 		2ADB0C0B1E6D35D300F2142D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB0C0A1E6D35D300F2142D /* NetworkManager.swift */; };
 		2ADB0C0D1E6D39A200F2142D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB0C0C1E6D39A200F2142D /* LoginViewController.swift */; };
 		2ADB0C0F1E6D3BE400F2142D /* ReturnCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB0C0E1E6D3BE400F2142D /* ReturnCode.swift */; };
@@ -52,6 +56,10 @@
 		2A9354BD1E65D01E00DD75BE /* SubscriptionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionViewCell.swift; sourceTree = "<group>"; };
 		2A9354C01E65D10600DD75BE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2A9354C21E65D7E800DD75BE /* starbucks-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "starbucks-logo.jpg"; sourceTree = "<group>"; };
+		2AA8BF471E6F014200624BAB /* PurchasingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasingViewController.swift; sourceTree = "<group>"; };
+		2AA8BF491E6F021700624BAB /* Pricing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pricing.swift; sourceTree = "<group>"; };
+		2AA8BF4B1E6F022300624BAB /* Discount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
+		2AA8BF4D1E6F024A00624BAB /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2ADB0C0A1E6D35D300F2142D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2ADB0C0C1E6D39A200F2142D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2ADB0C0E1E6D3BE400F2142D /* ReturnCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnCode.swift; sourceTree = "<group>"; };
@@ -130,6 +138,9 @@
 				2A9354B31E65CF4B00DD75BE /* User.swift */,
 				2A9354B51E65CF5B00DD75BE /* SubscriptionItem.swift */,
 				2A9354B71E65CF6500DD75BE /* Transaction.swift */,
+				2AA8BF491E6F021700624BAB /* Pricing.swift */,
+				2AA8BF4B1E6F022300624BAB /* Discount.swift */,
+				2AA8BF4D1E6F024A00624BAB /* Product.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 				2ADCCA281E67DBE6006E694B /* ItemDetailController.swift */,
 				2ADCCA2A1E67DBF8006E694B /* ReviewsViewController.swift */,
 				2ADCCA2C1E67F113006E694B /* MapViewController.swift */,
+				2AA8BF471E6F014200624BAB /* PurchasingViewController.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -327,12 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADCCA2D1E67F113006E694B /* MapViewController.swift in Sources */,
+				2AA8BF481E6F014200624BAB /* PurchasingViewController.swift in Sources */,
 				2A60217F1E671BC10049D985 /* SubscriptionDetailViewController.swift in Sources */,
 				2A9354B41E65CF4B00DD75BE /* User.swift in Sources */,
 				2ADB0C0D1E6D39A200F2142D /* LoginViewController.swift in Sources */,
+				2AA8BF4E1E6F024A00624BAB /* Product.swift in Sources */,
 				2A9354BC1E65D00700DD75BE /* SubscriptionListViewController.swift in Sources */,
 				2A39C1811E68512D005E5BC8 /* RegistrationViewController.swift in Sources */,
 				2A17561E1E6DA64000528A30 /* ProgressView.swift in Sources */,
+				2AA8BF4C1E6F022300624BAB /* Discount.swift in Sources */,
 				2ADB0C0F1E6D3BE400F2142D /* ReturnCode.swift in Sources */,
 				2A61381F1E5DBF820098F9E2 /* AppDelegate.swift in Sources */,
 				2A9354C11E65D10600DD75BE /* Utils.swift in Sources */,
@@ -341,6 +356,7 @@
 				2ADCCA2B1E67DBF8006E694B /* ReviewsViewController.swift in Sources */,
 				2ADB0C0B1E6D35D300F2142D /* NetworkManager.swift in Sources */,
 				2ADCCA291E67DBE6006E694B /* ItemDetailController.swift in Sources */,
+				2AA8BF4A1E6F021700624BAB /* Pricing.swift in Sources */,
 				2A1756201E6DAF3000528A30 /* MainViewController.swift in Sources */,
 				2A9354B81E65CF6500DD75BE /* Transaction.swift in Sources */,
 				2A9354B61E65CF5B00DD75BE /* SubscriptionItem.swift in Sources */,

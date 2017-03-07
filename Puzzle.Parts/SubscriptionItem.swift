@@ -16,6 +16,11 @@ public class SubscriptionItem: NSObject {
 	var rating: Float = 0
 	var smallImageURL: String = ""
 	var introduction: String = ""
+	var itemDescription: String = ""
+	
+	var pricingList = [Pricing]()
+	var discountList = [Discount]()
+	
 	override init() {
 		super.init()
 	}
@@ -32,17 +37,6 @@ public class SubscriptionItem: NSObject {
 		//self.smallImageURL = data["smallImage"] as! String
 		self.introduction = data["introduction"] as! String
 		self.rating = data["rating"] as! Float
-
-		/*
-		{
-		"subscription_id": 1,
-		"name": "Starbucks",
-		"introduction": "Best coffee",
-		"rating": 0,
-		"smallImage": null,
-		"companyId": 1,
-		"companyName": "Starbucks"
-		},
-		*/
+		self.itemDescription = data["itemDescription"] as! String
 	}
 }

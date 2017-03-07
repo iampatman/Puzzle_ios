@@ -14,6 +14,13 @@ class SubscriptionListViewController: UITableViewController {
 	var progressView: ProgressViewController?
 	var data = [SubscriptionItem]()
 	var user: User?
+	
+	
+	lazy var detailViewController: SubscriptionDetailViewController = {
+		let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SubscriptionDetailNaviController") as? UINavigationController
+		let vc = nextVC?.viewControllers[0] as? SubscriptionDetailViewController
+		return vc!
+	} ()
     override func viewDidLoad() {
         super.viewDidLoad()
 		//data =  Utils.initSubscriptionItemData()
@@ -45,7 +52,7 @@ class SubscriptionListViewController: UITableViewController {
 
 	
 	func fetchSubscriptionList(_ completion: @escaping (Int)-> Void){
-		let sig = ""//Utils.getSigWithParams([user?.mobilePhone, user?.sessionID])
+		let sig = ""
 		let url = NetworkManager.API_URL + "/subscription/getlist"
 		let params = ["mobilePhone": user?.mobilePhone, "sessionID": user?.sessionID, "sig": sig]
 		alamofire?.request(url, method: .post, parameters: params , encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
@@ -91,11 +98,9 @@ extension SubscriptionListViewController {
 	
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SubscriptionDetailNaviController") as? UINavigationController
-		let vc = nextVC?.viewControllers[0] as? SubscriptionDetailViewController
-		vc?.item = data[indexPath.row]
-		navigationController?.pushViewController(vc!, animated: true)
-		
+		self.detailViewController.item = data[indexPath.row]
+		self.detailViewController.user = self.user
+		navigationController?.pushViewController(self.detailViewController, animated: true)
 	}
 	
 	

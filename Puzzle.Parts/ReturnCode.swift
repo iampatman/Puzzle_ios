@@ -13,11 +13,12 @@ class ReturnCode: NSObject {
 	static let FAILED = 0
 	static let USERNAME_OR_PASS_INCORRECT = -1005
 	static func getErrorMessageWithCode(_ code: Int) -> String {
+		let msg = "Error Code: \(code): "
 		switch code {
 		case USERNAME_OR_PASS_INCORRECT:
-			return "Username or password is incorrect"
+			return msg.appending("Username or password is incorrect")
 		default:
-			return ""
+			return msg.appending("Unknown Error")
 		}
 	}
 }

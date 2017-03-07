@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupViews()
+		txtMobilePhone.text = "81733082"
+		txtPassword.text = "123"
     }
 	
 	func setupViews(){
@@ -31,6 +33,7 @@ class LoginViewController: UIViewController {
 		}
 		progressView = ProgressViewController(text: "Logging in")
 		progressView?.isHidden = true;
+		progressView?.backgroundColor = UIColor.lightGray
 		self.view.addSubview(progressView!)
 	}
 
