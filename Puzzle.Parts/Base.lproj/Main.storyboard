@@ -727,6 +727,29 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Photos" id="YnH-Hr-Fh0">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="Q6v-SP-van">
+                                        <rect key="frame" x="0.0" y="278" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q6v-SP-van" id="dfz-2e-T5O">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="cSa-vh-uLS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                                </scrollView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cSa-vh-uLS" secondAttribute="bottom" id="CPx-Xk-X6s"/>
+                                                <constraint firstItem="cSa-vh-uLS" firstAttribute="top" secondItem="dfz-2e-T5O" secondAttribute="top" id="pBq-a8-M3t"/>
+                                                <constraint firstAttribute="trailing" secondItem="cSa-vh-uLS" secondAttribute="trailing" id="wn4-Vz-dc5"/>
+                                                <constraint firstItem="cSa-vh-uLS" firstAttribute="leading" secondItem="dfz-2e-T5O" secondAttribute="leading" id="zL4-fJ-xvV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="QWM-xn-Wb3" id="QIc-TD-n6F"/>
@@ -736,6 +759,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="photoScrollView" destination="cSa-vh-uLS" id="nLQ-sb-Y5W"/>
                         <outlet property="textViewDescription" destination="qgW-Fo-TBs" id="Fx3-WL-HN6"/>
                     </connections>
                 </tableViewController>
@@ -1068,7 +1092,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="6xH-PG-Nsp" kind="show" id="Gzu-cb-OU1"/>
+                                            <segue destination="I2r-Lm-eUZ" kind="show" id="4jB-Aj-SkD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="zCN-MC-OnD">
@@ -1412,24 +1436,6 @@
             <point key="canvasLocation" x="896.79999999999995" y="-461.01949025487261"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="uAE-Wn-78e">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6xH-PG-Nsp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7jY-fI-fHY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="I2r-Lm-eUZ" kind="relationship" relationship="rootViewController" id="dxV-Mf-M6u"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3zR-7E-GX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2607" y="-802"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="xqu-oL-eHf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ST-d9-0h2" sceneMemberID="viewController">
@@ -1454,7 +1460,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NuS-3b-QPs"/>
-        <segue reference="uOA-TV-rhj"/>
+        <segue reference="Nh2-gz-ixG"/>
         <segue reference="fdh-1H-btH"/>
     </inferredMetricsTieBreakers>
 </document>
