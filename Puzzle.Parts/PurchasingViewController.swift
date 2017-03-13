@@ -12,19 +12,28 @@ class PurchasingViewController: UITableViewController {
 	
 	var user: User?
 	var item: SubscriptionItem?
-	
+	var durationData = [Discount]()
+	var pricingData = [Pricing]()
+	@IBOutlet weak var quantityPickerView: UIPickerView!
+	@IBOutlet weak var lblStarttime: UILabel!
 	@IBOutlet weak var datePickerCell: UITableViewCell!
 	@IBOutlet weak var datePickerStartDate: UIDatePicker!
-	@IBOutlet weak var txtStartDate: UITextField!
-	@IBOutlet weak var txtEndDate: UITextField!
+	//@IBOutlet weak var txtEndDate: UITextField!
+	@IBOutlet weak var lblDuration: UILabel!
 	@IBOutlet weak var txtPrice: UITextField!
 	@IBOutlet weak var sliderQuantity: UISlider!
 	@IBOutlet weak var lblQuantity: UILabel!
 	var progressView: ProgressViewController?
+	
+	var calendarCellIndexPath: IndexPath?
 	var alamofireManager = NetworkManager.shareInstance.alamoFireManager
+	
+	var edittingStartDate = false
+	var edittingDuration = false
+	var selected_discount_id: Int = 0
+	var selected_pricing_id: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-		txtStartDate.text = "Today"
 		datePickerStartDate.minimumDate = Date()
 		progressView = ProgressViewController(text: "")
 		progressView?.isHidden = true;
@@ -32,6 +41,8 @@ class PurchasingViewController: UITableViewController {
 		progressView?.activityIndictor.center = (progressView?.center)!
 		progressView?.center = self.view.center
 		progressView?.backgroundColor = UIColor.lightGray
+		quantityPickerView.delegate = self
+		quantityPickerView.dataSource = self
 		self.view.addSubview(progressView!)
 		progressView?.show()
 		fetchItemDetails { (result) in
@@ -42,9 +53,20 @@ class PurchasingViewController: UITableViewController {
 					self.dismiss(animated: true, completion: nil)
 				})
 			}
+			
+			
+			self.durationData = (self.item?.discountList)!
+			self.quantityPickerView.reloadAllComponents()
+			self.pricingData = (self.item?.pricingList)!
+			self.sliderQuantity.maximumValue = Float(self.pricingData.count-1)
+			self.sliderQuantity.minimumValue = 0
 		}
 
     }
+	
+	func setupViews(){
+		
+	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -97,8 +119,12 @@ class PurchasingViewController: UITableViewController {
 		})
 	}
 	@IBAction func btnPurchaseTouched(_ sender: UIButton) {
-		let hidden = self.datePickerStartDate.isHidden
-		self.datePickerStartDate.isHidden = !hidden
+		self.sendSubscribingRequest { (result) in
+			let vc = Utils.getAlertView(title: "Message", message: ReturnCode.getErrorMessageWithCode(result), actions: nil)
+			self.present(vc, animated: true, completion: nil)
+		}
+		
+		
 	}
 	
 	@IBOutlet weak var btnPurchase: UIButton!
@@ -107,12 +133,12 @@ class PurchasingViewController: UITableViewController {
 		guard let user = user, let item = item else {
 			return;
 		}
-		let selected_pricing_id = 1
-		let selected_discount_id = 1
-		let url = NetworkManager.API_URL + "/subscription/getdetailbyid"
+		let url = NetworkManager.API_URL + "/subscription/purchase"
 		var params = Parameters()
 		params["mobilePhone"] = user.mobilePhone
+		params["user_id"] = user.userId
 		params["sessionID"] = user.sessionID
+		params["startDate"] = ""
 		params["subscription_id"] = item.id
 		params["pricing_id"] = selected_pricing_id
 		params["discount_id"] = selected_discount_id
@@ -129,36 +155,95 @@ class PurchasingViewController: UITableViewController {
 			}
 			
 			let returnCode = data["returnCode"] as? Int
-			guard returnCode == ReturnCode.SUCCESS else {
-				completion(returnCode!)
-				return
-			}
+			completion(returnCode!)
+//			guard returnCode == ReturnCode.SUCCESS else {
+//				completion(returnCode!)
+//				return
+//			}
 		});
 		
 		
 		
 	}
-	var edittingStartDate = false
 
+	@IBAction func quantitySliderValueChanged(_ sender: Any) {
+		let index = Int(sliderQuantity.value)
+		selected_pricing_id = pricingData[index].pricing_id
+		txtPrice.text = String(pricingData[index].price) + " $"
+		lblQuantity.text = "\(pricingData[index].quantity)"
+	}
+	
+	
 }
 
 extension PurchasingViewController {
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		if (indexPath.section == 0 && indexPath.row == 1){
+		switch (indexPath.section, indexPath.row)  {
+		case (0,1):
+			self.calendarCellIndexPath = indexPath
 			if (edittingStartDate){
-				return 120
+				return 150
 			} else {
 				return 0
 			}
+		case (0,3):
+			if (edittingDuration){
+				return 150
+			} else {
+				return 0
+			}
+		default:
+			return 44
 		}
-		return 44;
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		if (indexPath.section == 0 && indexPath.row == 0){
+		switch (indexPath.section, indexPath.row){
+		case (0,0):
 			edittingStartDate = !edittingStartDate
-			self.tableView.reloadData()
-			
+			self.tableView.beginUpdates()
+			self.tableView.endUpdates()
+			break
+		case (0,2):
+			edittingDuration = !edittingDuration
+			self.tableView.beginUpdates()
+			self.tableView.endUpdates()
+			break;
+		default:
+			return;
 		}
+		
 	}
 }
+
+extension PurchasingViewController {
+	@IBAction func datePickerValueChanged(_ sender: Any) {
+		lblStarttime.text = Utils.getStringFromDate(datePickerStartDate.date)
+	}
+	
+}
+
+extension PurchasingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+	func numberOfComponents(in pickerView: UIPickerView) -> Int {
+		return 1
+	}
+	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return durationData.count
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		let string = "\(durationData[row].duration) " + (durationData[row].duration == 1 ? "Month" : "Months")
+		return string
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		
+		selected_discount_id = durationData[row].discount_id
+		let string = "\(durationData[row].duration) " + (durationData[row].duration == 1 ? "Month" : "Months")
+		lblDuration.text = string
+		
+	}
+	
+	
+}
+

@@ -13,7 +13,7 @@ class User: NSObject {
 	var sessionID: String = ""
 	var email: String = ""
 	var name: String = ""
-	
+	var userId: Int = 0
 	override init() {
 		super.init()
 		mobilePhone = ""

@@ -76,6 +76,10 @@ class LoginViewController: UIViewController {
 			if let data = response.result.value as? NSDictionary {
 				let returnCode = data["returnCode"] as! Int
 				let sessionID = data["sessionID"] as! String
+				if let detailsData = data["details"] as? [String:Any] {
+					self.user?.name = (detailsData["name"] as! String).capitalized
+					self.user?.userId = detailsData["userId"] as! Int
+				}
 				self.user?.mobilePhone = mobile
 				self.user?.sessionID = sessionID
 				completion(returnCode)

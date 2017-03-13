@@ -22,6 +22,13 @@ public class Utils: NSObject {
 		
 	}
 	
+	public static func getStringFromDate(_ date: Date) -> String{
+		let df = DateFormatter()
+		df.dateFormat = "dd/MM/yyyy"
+		df.dateStyle = .medium
+		return df.string(from: date)
+	}
+	
 	private static func sha256(_ data: Data) -> Data? {
 		guard let res = NSMutableData(length: Int(CC_SHA256_DIGEST_LENGTH)) else { return nil }
 		CC_SHA256((data as NSData).bytes, CC_LONG(data.count), res.mutableBytes.assumingMemoryBound(to: UInt8.self))
