@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A08D7F51E7835F9001F14F6 /* TransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08D7F41E7835F9001F14F6 /* TransactionViewCell.swift */; };
 		2A17561E1E6DA64000528A30 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17561D1E6DA64000528A30 /* ProgressView.swift */; };
 		2A1756201E6DAF3000528A30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17561F1E6DAF3000528A30 /* MainViewController.swift */; };
 		2A39C1811E68512D005E5BC8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39C1801E68512D005E5BC8 /* RegistrationViewController.swift */; };
@@ -15,6 +16,7 @@
 		2A6138261E5DBF820098F9E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6138241E5DBF820098F9E2 /* Main.storyboard */; };
 		2A6138281E5DBF820098F9E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6138271E5DBF820098F9E2 /* Assets.xcassets */; };
 		2A61382B1E5DBF820098F9E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6138291E5DBF820098F9E2 /* LaunchScreen.storyboard */; };
+		2A91852A1E762A2A00C997B6 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9185291E762A2A00C997B6 /* DashboardViewController.swift */; };
 		2A9354B41E65CF4B00DD75BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354B31E65CF4B00DD75BE /* User.swift */; };
 		2A9354B61E65CF5B00DD75BE /* SubscriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354B51E65CF5B00DD75BE /* SubscriptionItem.swift */; };
 		2A9354B81E65CF6500DD75BE /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9354B71E65CF6500DD75BE /* Transaction.swift */; };
@@ -39,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		281938B17707F3C80F229678 /* Pods-Puzzle.Parts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle.Parts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle.Parts/Pods-Puzzle.Parts.release.xcconfig"; sourceTree = "<group>"; };
+		2A08D7F41E7835F9001F14F6 /* TransactionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewCell.swift; sourceTree = "<group>"; };
 		2A17561D1E6DA64000528A30 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		2A17561F1E6DAF3000528A30 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2A39C1801E68512D005E5BC8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		2A6138271E5DBF820098F9E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A61382A1E5DBF820098F9E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A61382C1E5DBF820098F9E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A9185291E762A2A00C997B6 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		2A9354B31E65CF4B00DD75BE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2A9354B51E65CF5B00DD75BE /* SubscriptionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionItem.swift; sourceTree = "<group>"; };
 		2A9354B71E65CF6500DD75BE /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 			path = Puzzle.Parts;
 			sourceTree = "<group>";
 		};
+		2A9185281E7629ED00C997B6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				2A9185291E762A2A00C997B6 /* DashboardViewController.swift */,
+				2A08D7F41E7835F9001F14F6 /* TransactionViewCell.swift */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
 		2A9354B21E65CF3900DD75BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 		2A9354B91E65CFD700DD75BE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A9185281E7629ED00C997B6 /* Dashboard */,
 				2A39C17F1E68510C005E5BC8 /* Registration */,
 				2ADCCA271E67D124006E694B /* New Group */,
 				2A9354BA1E65CFE100DD75BE /* ListSubscriptions */,
@@ -339,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADCCA2D1E67F113006E694B /* MapViewController.swift in Sources */,
+				2A91852A1E762A2A00C997B6 /* DashboardViewController.swift in Sources */,
 				2AA8BF481E6F014200624BAB /* PurchasingViewController.swift in Sources */,
 				2A60217F1E671BC10049D985 /* SubscriptionDetailViewController.swift in Sources */,
 				2A9354B41E65CF4B00DD75BE /* User.swift in Sources */,
@@ -350,6 +365,7 @@
 				2AA8BF4C1E6F022300624BAB /* Discount.swift in Sources */,
 				2ADB0C0F1E6D3BE400F2142D /* ReturnCode.swift in Sources */,
 				2A61381F1E5DBF820098F9E2 /* AppDelegate.swift in Sources */,
+				2A08D7F51E7835F9001F14F6 /* TransactionViewCell.swift in Sources */,
 				2A9354C11E65D10600DD75BE /* Utils.swift in Sources */,
 				2A9354BE1E65D01E00DD75BE /* SubscriptionViewCell.swift in Sources */,
 				2AFAFDF71E684B0500D1636E /* SubscriptionAPI.swift in Sources */,

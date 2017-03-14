@@ -23,11 +23,12 @@ class SubscriptionListViewController: UITableViewController {
 	} ()
     override func viewDidLoad() {
         super.viewDidLoad()
-		//data =  Utils.initSubscriptionItemData()
 		if user != nil {
 			fetchDataList()
 		}
     }
+	
+	
 	func setupViews(){
 		progressView = ProgressViewController(text: "")
 		progressView?.isHidden = true;

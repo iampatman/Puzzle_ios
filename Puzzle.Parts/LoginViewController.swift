@@ -31,6 +31,11 @@ class LoginViewController: UIViewController {
 				vc.user = user;
 			}
 		}
+		if let naviVC = mainViewController?.viewControllers?[1] as? UINavigationController {
+			if let vc = naviVC.viewControllers[0] as? DashboardViewController {
+				vc.user = user;
+			}
+		}
 		progressView = ProgressViewController(text: "Logging in")
 		progressView?.isHidden = true;
 		progressView?.backgroundColor = UIColor.lightGray
